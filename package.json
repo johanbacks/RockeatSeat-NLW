@@ -1,20 +1,26 @@
 {
-  "name": "RockeatSeatNLW",
+  "name": "nlw",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/johanbacks/RockeatSeat-NLW.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Johan Back",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/johanbacks/RockeatSeat-NLW/issues"
   },
-  "homepage": "https://github.com/johanbacks/RockeatSeat-NLW#readme"
+  "homepage": "https://github.com/johanbacks/RockeatSeat-NLW#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
 }
