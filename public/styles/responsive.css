@@ -21,6 +21,12 @@
   #page-home main {
     align-items: center;
   }
+  #page-create-point .field-group {
+    flex-direction: column;
+  }
+  #page-create-point .field-group .filed + .filed{
+    margin-left: 0;
+  }
 }
 @media (min-width: 1700px) {
   #page-home {
