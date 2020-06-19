@@ -14,36 +14,37 @@
   {% include "partials/page-header.html"%}
 
   <main>
-    <h4>
-      <strong>2 pontos
+  {% if total > 0 %}
+  <h4>
+      <strong>
+      {{total}} pontos
       </strong>
       encontrados
     </h4>
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1558583055-d7ac00b1adca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="colectoria">
-        <h2>Colectoria</h2>
-        <h3>Resíduos Eletrônicos , Lâmpadas</h3>
-        <p>
-          Curitiba , Paraná
-          <br/>
-          Cel Dulcidio
-          <br/>Nº 1123
-        </p>
-      </div>
 
+    <div class="cards">
+
+      {% for place in places %}
       <div class="card">
-        <img src="https://images.unsplash.com/photo-1529783167753-ee7cfc8cf98e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=754&q=80" alt="papersider">
-        <h2>Papersider</h2>
-        <h3>Papeis e Papeão</h3>
+        <img src="{{place.image}}}" alt="{{ place.name }}">
+        <h2>{{place.name}}</h2>
+        <h3>{{ place.items }}</h3>
         <p>
-          Curitiba , Paraná
-          <br/>
-          Cel Dulcidio
-          <br/>Nº 1123
+         {{place.state}} {{place.city}}
+          <br>
+          {{place.address}}
+          <br>
+          {{place.address2}}
+          
         </p>
       </div>
+      {% endfor %}
+      
     </div>
+    {%else%}
+    <h4><strong> Nenhum </strong> local encontrados</h4>
+  {% endif %}
+  
 
   </main>
 
